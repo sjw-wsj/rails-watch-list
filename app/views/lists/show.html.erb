@@ -1,0 +1,16 @@
+
+
+<p><%= link_to "Go back to index", lists_path, class: "btn btn-primary" %></p>
+
+
+<h3><%= @list.name %></h3>
+
+  <% @list.movies.each do |movie| %>
+  <h4><%= movie.title %></h4>
+  <p>Overview : <%= movie.overview %></p>
+  <p> Link: <%= movie.poster_url %></p>
+  <p>Rating is: <%= movie.rating %></p>
+  <% end %>
+
+
+<p><%= link_to "write new bookmark", new_list_bookmark_path(@list), class: "btn btn-primary" %></p>

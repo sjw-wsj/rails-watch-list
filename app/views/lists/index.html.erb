@@ -1,0 +1,12 @@
+<h1>List of Genre</h1>
+<p><%= link_to "add new list of genre", new_list_path(@list) %></p>
+
+<ul>
+  <% @lists.each do |list| %>
+  <li><%= link_to list.name, list_path(list) %></li>
+<%= link_to list_path(list),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+  <i class = "fa-regular fa-trash-can" ></i>
+  <% end %>
+  <% end %>
+</ul>
