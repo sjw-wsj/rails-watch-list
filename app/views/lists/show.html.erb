@@ -5,6 +5,10 @@
 
 <h3><%= @list.name %></h3>
 
+<% @list.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
   <% @list.movies.each do |movie| %>
   <h4><%= movie.title %></h4>
   <p>Overview : <%= movie.overview %></p>

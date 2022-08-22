@@ -1,7 +1,7 @@
-<h1>new movie list</h1>
+<h1>new movie genre list</h1>
 <%= simple_form_for [@list] do |f| %>
   <%= f.input :name %>
-
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "create new movie", class: "btn btn-primary" %>
 
   <% end %>
